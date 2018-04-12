@@ -5,3 +5,9 @@ p{
   border-color: black;
   padding: 3px 5px;
 }
+
+.townSelect{
+  margin: 15px 3px;
+  font-family: Cursive;
+   font-size: 20px;
+}

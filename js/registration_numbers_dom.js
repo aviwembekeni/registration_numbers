@@ -27,8 +27,14 @@ function clearRegNumbers(){
 
 function addButtonClicked() {
     var regNum = regInputElem.value;
-    addRegNum.addRegistrationNo(regNum);
-    showRegNumber(regNum);
+    if (regNum.startsWith('CA') || regNum.startsWith('CJ') || regNum.startsWith('CF') || regNum.startsWith('CY')) {
+      addRegNum.addRegistrationNo(regNum);
+      showRegNumber(regNum);
+    } else {
+      alert("registration number must be from Cape Town, Belville, Paarl or Strand only!");
+
+    }
+
 }
 
 function handleTownSelectChange(){
