@@ -1,13 +1,89 @@
+.wrapper{
+  width: 100%;
+}
+
+
+.enterRegNo{
+  width: 100%;
+}
+
+h2 {
+  margin-left:  40%;
+}
+
+.regNumField{
+  margin-left:  40%;
+  width: 20%;
+  padding: 1em 3px;
+  font-size: 16px;
+}
+
+.addButton{
+  width: 5%;
+  padding: 1em 3px;
+  font-size: 16px;
+}
+
+span{
+  margin-left:  40%;
+  font-size: 26px;
+}
+
+.select{
+  width: 100%;
+    margin-top: 3%;
+}
+
+.regNumbersDisplay{
+  width: 100%;
+}
+
 p{
   width: 15%;
   border-radius: 5px;
   background: yellow;
   border-color: black;
   padding: 3px 5px;
+  margin-left:  40%;
 }
 
 .townSelect{
   margin: 15px 3px;
   font-family: Cursive;
-   font-size: 20px;
+   font-size: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .regNumField{
+    margin-left: 20%;
+    width: 50%;
+    font-size: 1.5em;
+  }
+
+  .addButton{
+    width: 10%;
+    font-size: 1.5em;
+  }
+
+  .select{
+    margin-top: 10%;
+
+  }
+
+  .townSelect{
+    font-size: 2em;
+    padding: 4px 6px;
+    
+  }
+
+  h2{
+    margin-left: 20%;
+    font-size: 3em;
+  }
+
+  span{
+    font-size: 2.5em;
+    margin-left: 20%;
+  }
+
 }
