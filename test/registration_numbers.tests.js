@@ -79,4 +79,14 @@ describe('AddRegNum', function() {
       addRegNum.addRegistrationNo('CY 987');
       assert.deepEqual({"CF 987": 0, 'CF 123': 0}, addRegNum.filterByTown('strand'));
     });
+
+    it('should return return all registration numbers when filter value is all.', function() {
+      var addRegNum = AddRegNum();
+
+      addRegNum.addRegistrationNo('CJ 123');
+      addRegNum.addRegistrationNo('CF 987');
+      addRegNum.addRegistrationNo('CF 123');
+      addRegNum.addRegistrationNo('CY 987');
+      assert.deepEqual({"CJ 123": 0, 'CF 987': 0, 'CF 123': 0, 'CY 987': 0}, addRegNum.filterByTown('all'));
+    });
 });
