@@ -23,8 +23,6 @@ function getRegistrationNumbersFromStorage() {
      regNumbers =JSON.parse(retrieved);
   }
 
-  console.log(regNumbers);
-
   return regNumbers;
 }
 

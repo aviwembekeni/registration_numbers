@@ -23,8 +23,6 @@ function AddRegNum(registrationNumbers){
       var filteredObj = {};
       var startsWith ;
 
-      console.log(regNums);
-
       if (selecedTown == "cape town") {
         startsWith = 'CA';
       } else if (selecedTown == "paarl") {
@@ -48,8 +46,8 @@ function AddRegNum(registrationNumbers){
     }
 
     function clearRegNos(){
-      regNum = {};
-      return regNum;
+      regNums = {};
+      return regNums;
     }
 
   return {
