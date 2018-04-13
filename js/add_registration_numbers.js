@@ -1,5 +1,5 @@
 function AddRegNum(){
-  regNums =  {};
+  var regNums =  {};
 
     function addRegNum(regNum){
       if(regNums[regNum] === undefined){
@@ -19,9 +19,36 @@ function AddRegNum(){
       }
     }
 
+    function filterBySelectedTown(selecedTown){
+      var filteredObj = {};
+      var startsWith ;
+
+      if (selecedTown == "cape town") {
+        startsWith = 'CA';
+      } else if (selecedTown == "paarl") {
+        startsWith = 'CJ';
+      } else if (selecedTown == "belville") {
+        startsWith = 'CY';
+      } else if (selecedTown == "strand") {
+        startsWith = 'CF';
+      }else if (selecedTown == "all") {
+        return regNums;
+      }
+
+      Object.keys(regNums).map(regNo =>{
+       if (regNo.startsWith(startsWith)) {
+         filteredObj[regNo] = 0;
+       }
+
+      })
+
+      return filteredObj;
+    }
+
   return {
     addRegistrationNo: addRegNum,
     getRegistrationNos: getRegNums,
-    regNoFromTown : regNumberFromTown
+    regNoFromTown : regNumberFromTown,
+    filterByTown : filterBySelectedTown
   }
 }

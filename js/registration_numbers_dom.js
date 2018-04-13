@@ -39,30 +39,14 @@ function addButtonClicked() {
 
 function handleTownSelectChange(){
  clearRegNumbers();
-  var newRegList= {};
+
   var startsWith ;
 
   var selecedTown = townSelectElem.value;
 
-  if (selecedTown == "cape town") {
-    startsWith = 'CA';
-  } else if (selecedTown == "paarl") {
-    startsWith = 'CJ';
-  } else if (selecedTown == "belville") {
-    startsWith = 'CY';
-  } else if (selecedTown == "strand") {
-    startsWith = 'CF';
-  }
+  var filterdRegNums = addRegNum.filterByTown(selecedTown);
 
-  regNos = addRegNum.getRegistrationNos();
-  Object.keys(regNos).map(regNo =>{
-   if (regNo.startsWith(startsWith)) {
-     newRegList[regNo] = 0;
-   }
-
-  })
-
-  Object.keys(newRegList).map(regNo =>{
+  Object.keys(filterdRegNums).map(regNo =>{
     showRegNumber(regNo);
   })
 }
