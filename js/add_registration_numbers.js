@@ -11,8 +11,17 @@ function AddRegNum(){
       return regNums;
     }
 
+    function regNumberFromTown(regNum){
+      if (regNum.startsWith('CA') || regNum.startsWith('CJ') || regNum.startsWith('CF') || regNum.startsWith('CY')) {
+        return true;
+      }else {
+        return false;
+      }
+    }
+
   return {
     addRegistrationNo: addRegNum,
-    getRegistrationNos: getRegNums
+    getRegistrationNos: getRegNums,
+    regNoFromTown : regNumberFromTown
   }
 }
