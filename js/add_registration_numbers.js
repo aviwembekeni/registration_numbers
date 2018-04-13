@@ -1,5 +1,5 @@
-function AddRegNum(){
-  var regNums =  {};
+function AddRegNum(registrationNumbers){
+  var regNums = registrationNumbers || {};
 
     function addRegNum(regNum){
       if(regNums[regNum] === undefined){
@@ -23,6 +23,8 @@ function AddRegNum(){
       var filteredObj = {};
       var startsWith ;
 
+      console.log(regNums);
+
       if (selecedTown == "cape town") {
         startsWith = 'CA';
       } else if (selecedTown == "paarl") {
@@ -45,10 +47,16 @@ function AddRegNum(){
       return filteredObj;
     }
 
+    function clearRegNos(){
+      regNum = {};
+      return regNum;
+    }
+
   return {
     addRegistrationNo: addRegNum,
     getRegistrationNos: getRegNums,
     regNoFromTown : regNumberFromTown,
-    filterByTown : filterBySelectedTown
+    filterByTown : filterBySelectedTown,
+    clearRegistrationNos : clearRegNos
   }
 }
