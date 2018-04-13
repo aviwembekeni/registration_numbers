@@ -2,6 +2,7 @@ var regInputElem = document.querySelector(".regNumField");
 var addButtonElem = document.querySelector(".addButton");
 var regNoDispDiv = document.querySelector(".regNumbersDisplay");
 var townSelectElem = document.querySelector(".townSelect");
+var errorMessageDivElem = document.querySelector(".errorMessageDiv");
 
 addButtonElem.addEventListener('click', addButtonClicked);
 townSelectElem.addEventListener('change', handleTownSelectChange);
@@ -33,7 +34,7 @@ function addButtonClicked() {
       addRegNum.addRegistrationNo(regNum);
       showRegNumber(regNum);
     }else {
-      alert("registration number must be from Cape Town, Belville, Paarl or Strand only!");
+      errorMessageDivElem.style.display='inline-block';
     }
 }
 
