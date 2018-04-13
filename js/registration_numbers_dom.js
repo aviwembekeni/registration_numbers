@@ -10,14 +10,14 @@ townSelectElem.addEventListener('change', handleTownSelectChange);
 var addRegNum = AddRegNum();
 
 function showRegNumber(regNumber){
-  var parEl = document.createElement("p");
+  var paragraphElem = document.createElement("p");
   var newContent = document.createTextNode(regNumber);
-  parEl.appendChild(newContent);
-  regNoDispDiv.appendChild(parEl);
+  paragraphElem.appendChild(newContent);
+  regNoDispDiv.appendChild(paragraphElem);
 }
 
 function clearRegNumbers(){
-  var parEl = document.querySelector("p");
+  var paragraphElem = document.querySelector("p");
 
 
   while (regNoDispDiv.firstChild) {
