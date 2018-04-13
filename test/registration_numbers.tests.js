@@ -39,4 +39,44 @@ describe('AddRegNum', function() {
 
       assert.deepEqual(false, addRegNum.regNoFromTown('CK 123'));
     });
+
+    it('should return return registration numbers from Cape Town.', function() {
+      var addRegNum = AddRegNum();
+
+      addRegNum.addRegistrationNo('CA 123');
+      addRegNum.addRegistrationNo('CA 987');
+      addRegNum.addRegistrationNo('CF 123');
+      addRegNum.addRegistrationNo('CY 987');
+      assert.deepEqual({"CA 123": 0, "CA 987": 0}, addRegNum.filterByTown('cape town'));
+    });
+
+    it('should return return registration numbers from Paarl.', function() {
+      var addRegNum = AddRegNum();
+
+      addRegNum.addRegistrationNo('CJ 123');
+      addRegNum.addRegistrationNo('CJ 987');
+      addRegNum.addRegistrationNo('CF 123');
+      addRegNum.addRegistrationNo('CY 987');
+      assert.deepEqual({"CJ 123": 0, "CJ 987": 0}, addRegNum.filterByTown('paarl'));
+    });
+
+    it('should return return registration numbers from Belville.', function() {
+      var addRegNum = AddRegNum();
+
+      addRegNum.addRegistrationNo('CJ 123');
+      addRegNum.addRegistrationNo('CJ 987');
+      addRegNum.addRegistrationNo('CF 123');
+      addRegNum.addRegistrationNo('CY 987');
+      assert.deepEqual({"CY 987": 0}, addRegNum.filterByTown('belville'));
+    });
+
+    it('should return return registration numbers from Strand.', function() {
+      var addRegNum = AddRegNum();
+
+      addRegNum.addRegistrationNo('CJ 123');
+      addRegNum.addRegistrationNo('CF 987');
+      addRegNum.addRegistrationNo('CF 123');
+      addRegNum.addRegistrationNo('CY 987');
+      assert.deepEqual({"CF 987": 0, 'CF 123': 0}, addRegNum.filterByTown('strand'));
+    });
 });
