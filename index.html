@@ -10,14 +10,19 @@
   </head>
   <body>
     <div class="wrapper">
-      <span>Registration Number:</span>
-      <div class="mdl-grid" >
+      <div class="errorMessageDiv mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+     <strong>Danger!</strong> registration number must be from Cape Town, Belville, Paarl or Strand only!
+      </div>
 
+      <div class="mdl-grid" >
+  <span>Registration Number:</span>
         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
 
           <form action="#">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input regNumField" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Enter registration number</label>
 
               </div>
             </form>
@@ -54,10 +59,7 @@
     <div class="regNumbersDisplay">
 
     </div>
-    <div class="errorMessageDiv">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-   <strong>Danger!</strong> registration number must be from Cape Town, Belville, Paarl or Strand only!
-    </div>
+
     </div>
 
   </body>
