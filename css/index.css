@@ -50,6 +50,9 @@ h2 {
 span{
   margin-left:  30%;
   font-size: 26px;
+  font-size: 1.5em;
+
+  font-weight: bold;
 }
 
 .select{
@@ -58,6 +61,7 @@ span{
 }
 
 .button2 {
+    width: 15%;
     background-color: #E65100; /* Green */
     border: none;
     color: white;
@@ -86,10 +90,15 @@ p{
   border-radius: 5px;
   background: yellow;
   border-color: black;
-  padding: 3px 5px;
-  margin-left:  30%;
   border-style: solid;
   border-width: 2px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 30%;
+
 }
 
 .townSelect{
@@ -128,7 +137,7 @@ p{
   }
 
   span{
-    font-size: 2.5em;
+    font-size: 3em;
     margin-left: 20%;
   }
 
@@ -139,9 +148,26 @@ p{
   }
 
   p{
-    font-size: 2em;
-    width: 50%;
-    padding: 5px 5px;
+
+    width: 30%;
+    border-radius: 5px;
+    background: yellow;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin-left: 30%;
+
+
+  }
+
+  .button2{
+      width: 30%;
+      font-size: 26px;
   }
 
 }
