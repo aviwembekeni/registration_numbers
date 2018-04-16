@@ -4,16 +4,36 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="enterRegNo">
-        <h2>Registration Number:</h2>
-        <input class="regNumField" type="text" name="regNumField" value="">
-        <button class="addButton" type="button" name="button">Add</button>
+      <span>Registration Number:</span>
+      <div class="mdl-grid" >
 
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+
+          <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input regNumField" type="text" id="sample1">
+
+              </div>
+            </form>
+        </div>
+
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect addButton" style="background-color:#1AB365; color:white">
+              ADD
+            </button>
+        </div>
       </div>
-      <div class="select">
+
+
+
+      <div class="mdl-grid select">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
         <span>Town: </span>
         <select class="townSelect">
           <option value="all">All</option>
@@ -22,20 +42,22 @@
           <option value="belville">Belville</option>
           <option value="strand">Strand</option>
         </select>
-
-        <button class="button2 clearRegNums">Clear list</button>
       </div>
-      <div class="clearRegDispl">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
 
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clearRegNums">
+          Clear list
+        </button>
+      </div>
+    </div>
 
-      </div>
-      <div class="regNumbersDisplay">
+    <div class="regNumbersDisplay">
 
-      </div>
-      <div class="errorMessageDiv">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-     <strong>Danger!</strong> registration number must be from Cape Town, Belville, Paarl or Strand only!
-      </div>
+    </div>
+    <div class="errorMessageDiv">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+   <strong>Danger!</strong> registration number must be from Cape Town, Belville, Paarl or Strand only!
+    </div>
     </div>
 
   </body>

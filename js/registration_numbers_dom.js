@@ -28,6 +28,10 @@ function getRegistrationNumbersFromStorage() {
 
 function showRegNumber(regNumber){
   var paragraphElem = document.createElement("p");
+  paragraphElem.classList.add('regNumDis')
+    paragraphElem.classList.add('mdl-button')
+    paragraphElem.classList.add('mdl-button--accent')
+
   var newContent = document.createTextNode(regNumber);
   paragraphElem.appendChild(newContent);
   regNoDispDiv.appendChild(paragraphElem);
