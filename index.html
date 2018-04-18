@@ -11,14 +11,10 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="errorMessageDiv mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-     <strong>Danger!</strong> registration number must be from Cape Town, Belville, Paarl or Strand only!
-      </div>
 
       <div class="mdl-grid" >
-  <span>Registration Number:</span>
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <span>Registration Number:</span>
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
 
           <form action="#">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -29,7 +25,7 @@
             </form>
         </div>
 
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect addButton" style="background-color:#1AB365; color:white">
               ADD
             </button>
@@ -39,7 +35,7 @@
 
 
       <div class="mdl-grid select">
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
         <span>Town: </span>
         <select class="townSelect">
           <option value="all">All</option>
@@ -49,11 +45,18 @@
           <option value="strand">Strand</option>
         </select>
       </div>
-      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
 
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clearRegNums">
           Clear list
         </button>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone ">
+        <div class="errorMessageDiv">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Danger!</strong> registration number must be from Cape Town, Belville, Paarl or Strand only!
+        </div>
+
       </div>
     </div>
 

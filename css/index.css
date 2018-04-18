@@ -17,10 +17,11 @@ body{
 
 .errorMessageDiv{
   display: none;
-  padding: 20px;
+  padding: 7px;
     background-color: #f44336;
     color: white;
     margin-right: 1rem;
+
 
 }
 
@@ -31,7 +32,7 @@ body{
     font-weight: bold;
     float: right;
     font-size: 22px;
-    line-height: 20px;
+    line-height: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
