@@ -49,17 +49,36 @@ function clearRegNumbers(){
 
 function addButtonClicked() {
     var regNum = regInputElem.value;
+    regInputElem.value = "";
+    var checkRegNum = addRegNum.getRegistrationNos();
+    var lastRegistrationNo;
 
-    var correctRegNo = addRegNum.regNoFromTown(regNum);
-    if (correctRegNo) {
-      addRegNum.addRegistrationNo(regNum);
-      showRegNumber(regNum);
+    if (Object.keys(checkRegNum).length == 0) {
+       lastRegistrationNo = "";
 
-      var registrationNumbers = addRegNum.getRegistrationNos();
-      localStorage.setItem('registrationNumbers', JSON.stringify(registrationNumbers));
     }else {
-      errorMessageDivElem.style.display='inline-block';
+       lastRegistrationNo = Object.keys(checkRegNum)[Object.keys(checkRegNum).length - 1];
     }
+
+
+    if (regNum !== lastRegistrationNo) {
+
+      var correctRegNo = addRegNum.regNoFromTown(regNum);
+      if (correctRegNo) {
+        addRegNum.addRegistrationNo(regNum);
+        var registrationNumbers = addRegNum.getRegistrationNos();
+        var lastReg = Object.keys(registrationNumbers)[Object.keys(registrationNumbers).length - 1];
+        showRegNumber(lastReg);
+
+        localStorage.setItem('registrationNumbers', JSON.stringify(registrationNumbers));
+
+
+      }else {
+        errorMessageDivElem.style.display='inline-block';
+      }
+
+   }
+
 
 
 }

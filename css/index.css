@@ -78,8 +78,9 @@ h2 {
 }
 
 .regNumbersDisplay{
-  width: 100%;
+  width: 85%;
   padding: 3rem 1rem;
+
 
 }
 
@@ -95,6 +96,7 @@ p.regNumDis {
   text-decoration: none;
   display: block;
   font-size: 16px;
+  margin-left: 1.5em;
   margin-bottom: 1.5em;
 
 
