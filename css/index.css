@@ -24,8 +24,28 @@ body{
 
 }
 
-.closebtn {
+.errorMessageDivHandleBars{
+  display: none;
+  padding: 7px;
+    background-color: #f44336;
+    color: white;
+    margin-right: 1rem;
 
+
+}
+
+.closebtn{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtnHandleBars{
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -40,7 +60,15 @@ body{
     color: black;
 }
 
+.closebtnHandleBars:hover {
+    color: black;
+}
+
 .enterRegNo{
+  width: 100%;
+}
+
+.enterRegNoHandleBars{
   width: 100%;
 }
 
@@ -78,7 +106,7 @@ h2 {
 }
 
 .regNumbersDisplay{
-  width: 85%;
+
   padding: 3rem 1rem;
 
 
@@ -102,11 +130,37 @@ p.regNumDis {
 
 }
 
+p.regNumDisHb {
+  width: 15%;
+  border: 1px solid;
+  border-radius: 5px;
+  background: yellow;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+
+
+}
+
 
 .townSelect{
   margin: 15px 3px;
   font-family: "Helvetica","Arial",sans-serif;
    font-size: 25px;
+   display: block;
+}
+
+.townSelectHandleBars{
+  margin: 15px 3px;
+  font-family: "Helvetica","Arial",sans-serif;
+   font-size: 25px;
+   display: block;
 }
 
 span{
@@ -117,10 +171,6 @@ span{
 }
 
 @media screen and (max-width: 992px) and (min-width: 480px){
-
-  p.regNumDis{
-
-  }
 
   span{
     font-size: 320%;

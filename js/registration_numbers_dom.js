@@ -38,8 +38,6 @@ function showRegNumber(regNumber){
 }
 
 function clearRegNumbers(){
-  var paragraphElem = document.querySelector("p");
-
 
   while (regNoDispDiv.firstChild) {
     regNoDispDiv.removeChild(regNoDispDiv.firstChild);
@@ -98,7 +96,7 @@ function handleTownSelectChange(){
 }
 
 function clearRegistrationNumbers(){
-  localStorage.clear();
+  localStorage.setItem('registrationNumbers', JSON.stringify({}));
   clearRegNumbers();
   var regNumbers = addRegNum.clearRegistrationNos();;
 

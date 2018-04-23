@@ -8,13 +8,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/x-template" class="regNumberTemplate">
+     {{#each registrationNumbers}}
+       <p class="mdl-button mdl-button--accent regNumDisHb"> {{@key}}</p>
+     {{/each}}
+  </script>
   </head>
   <body>
     <div class="wrapper">
+     <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+
+
 
       <div class="mdl-grid" >
+        <h2>Template Free Section</h2>
         <span>Registration Number:</span>
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
 
           <form action="#">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -23,19 +34,18 @@
 
               </div>
             </form>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect addButton" style="background-color:#1AB365; color:white">
+                ADD
+              </button>
         </div>
 
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect addButton" style="background-color:#1AB365; color:white">
-              ADD
-            </button>
-        </div>
+
       </div>
 
 
 
       <div class="mdl-grid select">
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
         <span>Town: </span>
         <select class="townSelect">
           <option value="all">All</option>
@@ -44,13 +54,12 @@
           <option value="belville">Belville</option>
           <option value="strand">Strand</option>
         </select>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
 
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clearRegNums">
           Clear list
         </button>
       </div>
+
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone ">
         <div class="errorMessageDiv">
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -63,11 +72,64 @@
       <div class="mdl-grid regNumbersDisplay">
 
       </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
 
+      <div class="mdl-grid" >
+        <h2>Handle Bars Section</h2>
+        <span>Registration Number:</span>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+
+          <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input regNumFieldHandleBars" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Enter registration number</label>
+
+              </div>
+            </form>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect addButtonHandleBars" style="background-color:#1AB365; color:white">
+                ADD
+              </button>
+        </div>
+      </div>
+
+      <div class="mdl-grid select">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <span>Town: </span>
+        <select class="townSelectHandleBars">
+          <option value="all">All</option>
+          <option value="cape town">Cape Town</option>
+          <option value="paarl">Paarl</option>
+          <option value="belville">Belville</option>
+          <option value="strand">Strand</option>
+        </select>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clearRegNumsHandleBars">
+          Clear list
+        </button>
+      </div>
+
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone ">
+        <div class="errorMessageDivHandleBars">
+          <span class="closebtnHandleBars" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Danger!</strong> registration number must be from Cape Town, Belville, Paarl or Strand only!
+        </div>
+
+      </div>
     </div>
 
+      <div class="mdl-grid regNumbersDisplayHandleBars">
+
+      </div>
+
+    </div>
+    </div>
+   </div>
   </body>
   <script src="js/add_registration_numbers.js"></script>
   <script src="js/registration_numbers_dom.js"></script>
+  <script src="js/add_registration_numbers_handleBars.js"></script>
+  <script src="js/registration_numbers_dom_handlebars.js"></script>
+
   </script>
 </html>
