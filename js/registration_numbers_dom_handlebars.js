@@ -50,24 +50,11 @@ function addButtonClicked() {
 
     var regNum = regInputElemHb.value;
     regInputElemHb.value = "";
-    var checkRegNum = addRegNumHb.getRegistrationNosHb();
-    var lastRegistrationNo;
-
-    if (Object.keys(checkRegNum).length == 0) {
-       lastRegistrationNo = "";
-
-    }else {
-       lastRegistrationNo = Object.keys(checkRegNum)[Object.keys(checkRegNum).length - 1];
-    }
-
-
-    if (regNum !== lastRegistrationNo) {
 
       var correctRegNo = addRegNumHb.regNoFromTownHb(regNum);
       if (correctRegNo) {
         addRegNumHb.addRegistrationNoHb(regNum);
         var registrationNumbers = addRegNumHb.getRegistrationNosHb();
-        var lastReg = Object.keys(registrationNumbers)[Object.keys(registrationNumbers).length - 1];
         showRegNumberHb(registrationNumbers);
 
         localStorage.setItem('registrationNumbersHb', JSON.stringify(registrationNumbers));
@@ -76,10 +63,6 @@ function addButtonClicked() {
       }else {
         errorMessageDivElemHb.style.display='inline-block';
       }
-
-   }
-
-
 
 }
 
