@@ -13,8 +13,8 @@ addButtonElemHb.addEventListener('click', addButtonClicked);
 townSelectElemHb.addEventListener('change', handleTownSelectChangeHb);
 clearRegNumsBtnHb.addEventListener('click', clearRegistrationNumbers);
 
-var addRegNumHb = AddRegNumHb(getRegistrationNumbersFromStorageHb());
-var regNos = addRegNumHb.getRegistrationNosHb();
+var addRegNumHb = AddRegNum(getRegistrationNumbersFromStorageHb());
+var regNos = addRegNumHb.getRegistrationNos();
   showRegNumberHb(regNos);
 
 function getRegistrationNumbersFromStorageHb() {
@@ -51,10 +51,10 @@ function addButtonClicked() {
     var regNum = regInputElemHb.value;
     regInputElemHb.value = "";
 
-      var correctRegNo = addRegNumHb.regNoFromTownHb(regNum);
+      var correctRegNo = addRegNumHb.regNoFromTown(regNum);
       if (correctRegNo) {
-        addRegNumHb.addRegistrationNoHb(regNum);
-        var registrationNumbers = addRegNumHb.getRegistrationNosHb();
+        addRegNumHb.addRegistrationNo(regNum);
+        var registrationNumbers = addRegNumHb.getRegistrationNos();
         showRegNumberHb(registrationNumbers);
 
         localStorage.setItem('registrationNumbersHb', JSON.stringify(registrationNumbers));
@@ -73,7 +73,7 @@ function handleTownSelectChangeHb(){
 
   var selecedTown = townSelectElemHb.value;
 
-  var filterdRegNums = addRegNumHb.filterByTownHb(selecedTown);
+  var filterdRegNums = addRegNumHb.filterByTown(selecedTown);
 
   showRegNumberHb(filterdRegNums);
 }
@@ -81,7 +81,7 @@ function handleTownSelectChangeHb(){
 function clearRegistrationNumbers(){
   localStorage.setItem('registrationNumbersHb', JSON.stringify({}));
   clearRegNumbersHb();
-  var regNumbers = addRegNumHb.clearRegistrationNosHb();;
+  var regNumbers = addRegNumHb.clearRegistrationNos();;
 
 
 }

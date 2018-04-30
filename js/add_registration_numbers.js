@@ -1,4 +1,4 @@
-function AddRegNum(registrationNumbers){
+function AddRegNum(registrationNumbers, section){
   var regNums = registrationNumbers || {};
 
     function addRegNum(regNum){
